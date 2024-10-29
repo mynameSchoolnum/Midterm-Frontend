@@ -1,5 +1,5 @@
-import { Outlet, NavLink, Link } from "react-router-dom";
-import image_logo from "../../assets/image_logo.JPG"
+import { Outlet, NavLink } from "react-router-dom";
+import image_logo from "../../assets/image_logo.JPG";
 
 const Header = () => {
   return (
@@ -20,9 +20,9 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <a class="nav-link" href="/projects">
+                <NavLink className="nav-link" to="/projects">
                   <i className="fas fa-project-diagram"></i> Projects
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/about">
@@ -36,8 +36,7 @@ const Header = () => {
 
       <Outlet />
     </>
-  )
+  );
 };
 
 export default Header;
-
